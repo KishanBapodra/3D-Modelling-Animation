@@ -1,6 +1,10 @@
 ## Coursework Scene
 
-Low Poly Future Desert scene where humans have long perished and robots from far far away visit the remains of a once full of life planet.
+#### Low Poly Future Desert scene where humans have long perished and robots from far far away visit the remains of a once full of life planet.
+
+
+![Rendered Image](./love-death-robots-intro-scene-night.png)
+
 
 ### Models created
 
@@ -35,9 +39,6 @@ References:
 2. Grand Canyon hdri: https://polyhaven.com/a/herkulessaulen
 3. Desert scene: https://sketchfab.com/3d-models/low-poly-desert-87f3124d9d2743c4986cdcedce269bae
 4. Skull: https://sketchfab.com/3d-models/cave-bear-skull-4662301761574d03ab305eb17cf7f12c
-
-![Rendered Image](./love-death-robots-intro-scene-night.png)
-
 
 
 
