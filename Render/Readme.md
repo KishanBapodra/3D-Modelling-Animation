@@ -1,6 +1,6 @@
 ## Coursework Scene
 
-#### Low Poly Future Desert scene where humans have long perished and robots from far far away visit the remains of a once full of life planet.
+#### Low Poly Desert scene set in the future where humans have long perished and robots from far away visit the remains of a once full of life planet to investigate and explore their origin planet.
 
 
 ![Rendered Image](./love-death-robots-intro-scene-night.png)
@@ -18,12 +18,12 @@ The four main models I have created are:
 For each model I have separately created materials adding different colors. I have also made use of ***emission*** material property for UFO lights and ***glass*** material for reflection from the UFO cockpit. I have used textures and hdri's for some models and the environment and have added them in the materials section under assets.
 
 **Textures**
-1.  I have tried multiple different textures for the desert sand plane after browsing through blenderkit, polligon and polyhaven websites and decided to use the procedural sand texture that looks pretty amazing when rendered in cycles.
-2.  I have used a metallic material with less roughness for Wall-F (1). Also created black eyes and mouth for the screen.
-3.  Added cactus texture image for cactus material.
+1.  I have tried multiple different textures for the desert sand plane after browsing through blenderkit, polligon and polyhaven websites and decided to use the ***procedural sand texture*** that looks pretty amazing when rendered in cycles.
+2.  I have used a ***metallic material*** with less roughness for Wall-F (1). Also created black eyes and mouth for the screen.
+3.  Added cactus ***texture image*** for cactus material.
 
 **Environment**
-1.  Used a desert grand canyon HDRI (2) for the environment lighting and UFO reflection
+1.  Used a ***Desert grand canyon HDRI*** (2) for the environment lighting and UFO reflection
 
 ### Lights
 I have used a simple **point light** to create a *night scene*. I have placed the light to give proper shading to make the scene look more realistic as lighting can play a big role in accentuating all models characteristics. I have also used lighting in the UFO by adding material with emissive property for the UFO.
