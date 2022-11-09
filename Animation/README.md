@@ -10,7 +10,7 @@ The UFO model was completely distorted wherein I had to remake it twice in blend
 
 **Materials:**  
 The following are the materials that I had to change or recreate in Unreal Engine.  
-1.  For both of the emissive materials in the UFO (UFO lights and Cockpit lights), I recreated them in Unreal Engine.  
+1.  Both of the emissive materials in the UFO (UFO lights and Cockpit lights) could not render in Unreal Engine as emissive materials, So I recreated them in Unreal Engine.  
 2.  For the desert sand texture, I found an image and created a custom material adding image node to the base material.  
 3.  For the Skull model, I couldnt render the texture and decided to use a custom rusted, bone dinosaur like material color.   
 4.  Removed the glass material from the UFO cockpit and added a simpler base material and red color to it.
