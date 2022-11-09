@@ -17,7 +17,7 @@ The UFO model was completely distorted wherein I had to remake it twice in blend
 I added a point light from Unreal Engine assets as I had trouble configuring the intensity of the environment and light exported from blender.  
 
 ## Animating Objects
-For my scene I have added four animations:
+For my scene I have added four animations: (Wall-F and Wall-B are the two robots).  
 1.  Wall-B Robot moving towards the center of the scene.
 2.  Wall-F Robot moving towards the center of the scene.
 3.  The scene switching from morning to night by animating the position and rotation of the light.
