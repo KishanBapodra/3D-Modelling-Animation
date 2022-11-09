@@ -7,10 +7,10 @@
 ### Models created
 
 The four main models I have created are: 
-1.  **Human like Robot (Wall-F)** --> Complex robot that I have made using mirror modifier since the robot is symmetrical and has a lot of details.
-2.  **UFO** --> Used simple UV spheres and added subdivision modifers and smooth shading. To create the UFO look I used proportional editing and raised the center of UFO.
-3.  **Simple Robot (Wall-B)** --> Simple model of a pyramid-shaped robot inspired from the show love,death + robots.  
-4.  **Cactus and Desert Plane** --> Simple cactus model made using cylinder shape by extruding and duplicating.  
+1.  **Human like Robot (Wall-F)** --> Complex robot. For the face, arms and legs I have used the mirror modifier since the it is symmetrical and has a lot of details, saving time. The arms and neck are created using an array modifier.
+2.  **UFO** --> Used simple UV spheres and added subdivision modifers and smooth shading. To create the UFO look I used proportional editing and raised the center of UFO. Also used UV spheres to create models for the light of UFO.
+3.  **Simple Robot (Wall-B)** --> Simple model of a pyramid-shaped robot inspired from the show love,death + robots. I have made a small UV sphere with a centre of white material to emulate a camera as an eye for the robot.
+4.  **Cactus and Desert Plane** --> Simple cactus model made by extruding and duplicating the base cylinder shape.  
 
 ### Materials and Textures
 - For each model I have separately created materials adding different colors.  
@@ -23,7 +23,7 @@ The four main models I have created are:
 3.  Added cactus ***texture image*** for cactus material.
 
 **Environment**
-1.  Used a ***Desert grand canyon HDRI*** (2) for the environment lighting and UFO reflection
+- Used a ***Desert grand canyon HDRI*** (2) for the environment lighting and UFO reflection
 
 ### Lights
 - I have used a simple **point light** to create a *night scene*. I have placed the light to give proper shading to make the scene look more realistic as lighting can play a big role in accentuating all models characteristics.   

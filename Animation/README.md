@@ -21,12 +21,15 @@ The following are the materials that I had to change or recreate in Unreal Engin
 - Added a point light over UFO as it the scene had changed to a night scene.
 
 ## Animating Objects
-For my scene I have added four animations: (Wall-F and Wall-B are the two robots).  
+For my scene I have added 3 animations of my models and 3 animations for lights: (Wall-F and Wall-B are the two robots).  
 1.  Wall-B Robot moving towards the center of the scene.
 2.  Wall-F Robot moving towards the center of the scene.
-3.  The scene switching from morning to night by animating the position and rotation of the light.
-4.  The UFO slowly landing.
+3.  The UFO landing and hovering.
+4.  Animated spot light using key frames in sequencer by changing rotation and position values to simulate scene switching from morning to night.
+5.  Animated the intensity of a point light to shed light on Wall-B (pyramid-shaped) robot and then increased it at the end of the video to show the final scene in its full glory.
+6.  Animated and scaled a point light and its intensity to show the UFO during the night scene. 
 
-#### Camera movement
 
-
+## Camera movement
+I have used cinematic camera provided in Unreal Engine 5 assets. I have used the same camera and animated a lot of keyframes with different positions and rotations throughout the scene.  
+It follows a one shot sequence starting from the skull model, slowly exposing the whole scene adding more and more depth, detail and slight surprise to the video animation. This is inspired by recent movies like 1917 and Boiling point and games like God of War.
