@@ -16,5 +16,5 @@ The Scene and Robot models are insipired from the fully animated TV Show Love De
 
 ### Scene Progress
 
-<img src="./Appendices/living-room-practise.png" width="250" height="250"> ---> <img src="./Appendices/render-1.png" width = 25% height=25%> ---> <img src="./Render/love-death-robots-intro-scene-night.png" width = 25% height = 25%> |
+<img src="./Appendices/living-room-practise.png" width=14% height=14%> ---> <img src="./Appendices/render-1.png" width = 25% height=25%> ---> <img src="./Render/love-death-robots-intro-scene-night.png" width = 25% height = 25%> |
  
