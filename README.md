@@ -12,3 +12,9 @@ The Scene and Robot models are insipired from the fully animated TV Show Love De
 - The skeleton model I have imported was around 30mb in size. But I found that blender offers a decimate modifier which reduces the amount of faces/vertices to reduce the size of model.  
 - Deleted a large amount of autosaves and crash folder which added upto 10mb of data.  
 - Converted final animation video from 1920x1080 avi file of about 1.1gb size to 1280x720 mp4 of size 16mb using mp4 (mpeg4) compression.  
+
+
+### Scene Progress
+
+<img src="./Appendices/living-room-practise.png" width="250" height="250"> ---> <img src="./Appendices/render-1.png" width = 25% height=25%> ---> <img src="./Render/love-death-robots-intro-scene-night.png" width = 25% height = 25%> |
+ 
