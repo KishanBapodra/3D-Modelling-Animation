@@ -7,7 +7,7 @@
 ### Models created
 
 The four main models I have created are: 
-1.  **Human like Robot (Wall-F)** --> Complex robot. For the face, arms and legs I have used the mirror modifier since the robot is symmetrical and has a lot of details, saving time. The arms and neck are created using an array modifier.
+1.  **Human like Robot (Wall-F)** --> Complex robot. For the robot model I have used the mirror modifier since a lot of the robot parts are symmetrical and has a lot of details, saving time not recreating or duplicating each part. First I worked on the Head of the robot. Added the screen next by inseting select faces. Worked on the headphone speakers next by extruding and scaling down all the way out. Then created the headband joining the headphones. Then moved on to creading the body which was a simple cylinder. Created some loop cuts and changed scaling to make it look chubby. Worked on the neck and arms next which were created by using circle and extruding them and adding array modifier. For the legs Finished off with duplicating neck circle without the array modifier, scaling it up and duplicating some faces in the screen to create eyes and mouth.  
 2.  **UFO** --> Used simple UV spheres and added subdivision modifers and smooth shading. To create the UFO look I used proportional editing and raised the center of UFO. Also used UV spheres to create models for the light of UFO.
 3.  **Simple Robot (Wall-B)** --> Simple model of a pyramid-shaped robot with a lot of loop cuts, robot model is inspired from the show love,death + robots. I have made a small UV sphere with a centre made of white color material to emulate a camera as an eye for the robot.  
 4.  **Cactus** --> Simple cactus model made by extruding and duplicating the base cylinder shape.  
