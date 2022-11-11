@@ -1,6 +1,7 @@
 # Coursework Animation sequence
 
 For the Unreal Engine part, upon exporting blender project as an fbx file and importing it to unreal, there were a few problems for some of my models, all of the textures, and the light.
+To Open the project file, open finalproject -> File -> Open Level -> futureDesert
 
 ## Fixing issues from importing.
 
