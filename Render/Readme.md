@@ -36,6 +36,8 @@ The four main models I have created are:
 - Added tents and skull to give a feel of deserted land that has long been abandoned.   
 - Added cactus for a more detailed environment as small details can bring a scene together.
 
+### Render Settings
+The final image is rendered in cycles with 1024 samples.
 
 I have imported the mountain (3), tent (3) and the skull (4) models from below links.
 
