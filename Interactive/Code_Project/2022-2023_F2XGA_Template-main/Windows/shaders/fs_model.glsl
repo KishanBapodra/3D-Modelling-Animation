@@ -26,9 +26,6 @@ uniform float ks;         // specular constant
 uniform float shininess;  // shininess constant
 
 void main(void){
-  //color = vec4(1.0,1.0,1.0,1.0);
-  //color = vec4(fs_in.normals, 1.0);
-
   // Diffuse
   vec4 lightDir = normalize(lightPosition - fs_in.vertex);
   float diff = max(dot(normalize(fs_in.normals), lightDir), 0.0);

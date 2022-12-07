@@ -1,7 +1,7 @@
 # OpenGL: Interactive Application of my 3D Model
 
 
-## *Models Loaded*  
+# Models Loaded 
   
 
 I added two separate models.  
@@ -22,14 +22,36 @@ Second model is my whole scene without Wall-F robot. Present in Assets -> finalI
 ![Code Snipper for Model Loading Image](../Appendices/modelOpenGL.jpg)  
   
 
-## *Scene Built*
+# Scene Built
+
+For building my scene, with trial and error, I changed the translations and rotations along with scale of both my matrices. Since it was two separate objects, I had to align the robot with the plane of the scene.  
+
+# Shaders and Materials
+
+## Materials:  
+
+I created UV Maps of my scene and my robot, baked in all materials, and connected final image texture to my models.
+- The textures are added in Assets -> textures.  
+- For final textures, I use mainrobo.png for Robot, Untitled.png for scene.  
+- Textures need to be made active and binded. So for each model, before calculating the matrix, I have binded the respective texture for that model.
+
+![Texture Binding](../Appendices/textureBinding.jpg)
+
+## Shaders:
+
+-  Fragment Shaders  
+
+![fragment shader](../Appendices/fragmentShader.jpg)
+
+    -   I have added fragment shaders code only for lighting. Lighting code given in lab was used for fs and vs shaders. I have added all three, Ambient, Diffuse and Specular Lighting along with Shininess constant. Their respective uniforms are added in render method in Source.cpp.
+
+-   Vertex Shaders
+
+![Vertex shader](../Appendices/vertexShader.jpg)
+
+    -   I have similarly added code for Lighting in vertex shaders. Vec3 variables are turned to Vec4 to allow alpha values.
+
+# Lights
 
 
-
-## *Shaders and Materials*
-
-
-## *Lights*
-
-
-## *Interactions*
+# Interactions
