@@ -62,3 +62,19 @@ I created UV Maps of my scene and my robot, baked in all materials, and connecte
 # Interactions
 
 ![Interactions](../Appendices/interaction.jpg)  
+
+# Keys for Basic Animations Listed for Easy Lookup.
+
+## Robot: 
+-   Rotation: J, L
+-   Position: W, A, S, D  
+
+## Camera:
+-   Position: UP, DOWN, LEFT, RIGHT (for xz plane, front-back and sides)
+-   Position: SPACE, LEFT_SHIFT (for y, up and down)
+
+## Scene (!Uses Numpad Keys):
+-   Rotation: NUMPAD 4, NUMPAD 6
+
+## Light
+-   Position: ADD, SUBTRACT (Numpad) || MINUS, EQUAL
