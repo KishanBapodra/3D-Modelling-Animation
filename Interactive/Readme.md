@@ -77,4 +77,8 @@ I created UV Maps of my scene and my robot, baked in all materials, and connecte
 -   Rotation: NUMPAD 4, NUMPAD 6
 
 ## Light
--   Position: ADD, SUBTRACT (Numpad) || MINUS, EQUAL
+-   Position: ADD, SUBTRACT (Numpad) || MINUS, EQUAL  
+
+<br/><br/>
+
+### I have multiple assets in my asset folder, which I was incrementally trying to load combining other models which I didnt wish to animate, while loading the models using I wish to animate using separate content loaders. My Robot seemed to break openGL code everytime I added it in my scene. So I early on I had to focus on getting the Robot model to load along with its textures. I haven't added my tents and the dinosaur skull into openGL as I had imported them from elsewhere, and they were very complex objects with too many faces and multiple complex image materials. To solve my Robot loading issue, I created separate blender file, used decimate modifier and reduced the number of faces of my model, baked materials into a UV mapped image texutre, and then got it to work on openGL.
