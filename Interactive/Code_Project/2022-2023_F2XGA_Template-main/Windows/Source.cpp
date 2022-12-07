@@ -88,7 +88,7 @@ auto deltaTime = 0.0f;								// time passed
 auto lastTime = 0.0f;								// Used to calculate Frame rate
 
 Pipeline pipeline;									// Add one pipeline plus some shaders.
-Content content;									// Add one content loader (+drawing).
+Content content;									// content (main scene) loader (+drawing).
 Content robot;										// robot loader
 Debugger debugger;									// Add one debugger to use for callbacks ( Win64 - openGLDebugCallback() ) or manual calls ( Apple - glCheckError() ) 
 
