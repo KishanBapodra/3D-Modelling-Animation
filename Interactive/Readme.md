@@ -39,19 +39,26 @@ I created UV Maps of my scene and my robot, baked in all materials, and connecte
 
 ## Shaders:
 
--  Fragment Shaders  
+1. Fragment Shaders  
+- I have added fragment shaders code only for lighting. Lighting code given in lab was used for fs and vs shaders. I have added all three, Ambient, Diffuse and Specular Lighting along with Shininess constant. Their respective uniforms are added in render method in Source.cpp.  
 
 ![fragment shader](../Appendices/fragmentShader.jpg)
 
-    -   I have added fragment shaders code only for lighting. Lighting code given in lab was used for fs and vs shaders. I have added all three, Ambient, Diffuse and Specular Lighting along with Shininess constant. Their respective uniforms are added in render method in Source.cpp.
 
--   Vertex Shaders
+2. Vertex Shaders
+- I have similarly added code for Lighting in vertex shaders. Vec3 variables are turned to Vec4 to allow alpha values.  
 
 ![Vertex shader](../Appendices/vertexShader.jpg)
 
-    -   I have similarly added code for Lighting in vertex shaders. Vec3 variables are turned to Vec4 to allow alpha values.
 
 # Lights
 
+- For Lighting, I used lab code given, to get started. 
+
+- I changed intensity values and experimented with them to give a canyon, desert like look.  
+
+![Init Values](../Appendices/lightingColorChange.jpg)
 
 # Interactions
+
+![Interactions](../Appendices/interaction.jpg)  
