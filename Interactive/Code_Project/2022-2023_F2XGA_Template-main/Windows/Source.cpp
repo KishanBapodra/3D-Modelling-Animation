@@ -98,7 +98,23 @@ vec3 modelRotation;									// Model rotation
 vec3 robotPosition;									// Robot position
 vec3 robotRotation;									// Robot rotation
 
-// GLuint rob;											// Robot texture
+
+// Lighting
+// glm::vec4 lightPos = glm::vec4(0.0f, 0.2f, 0.3f, 1.0f);
+// glm::vec4 ia = glm::vec4(0.5f, 0.5f, 0.5f, 1.0f);
+// GLfloat ka = 1.0f;
+// glm::vec4 id = glm::vec4(0.6f, 0.5f, 0.4f, 1.0f);
+// GLfloat kd = 1.0f;
+// glm::vec4 is = glm::vec4(0.8f, 0.4f, 0.3f, 1.0f);
+// GLfloat ks = 1.0f;
+
+glm::vec4 lightPos = glm::vec4(0.0f, 0.2f, 0.3f, 1.0f);
+glm::vec4 ia = glm::vec4(0.7f, 0.7f, 0.7f, 1.0f);
+GLfloat ka = 1.0f;
+glm::vec4 id = glm::vec4(1.2f, 1.0f, 0.8f, 1.0f);
+GLfloat kd = 1.0f;
+glm::vec4 is = glm::vec4(1.2f, 0.6f, 0.45f, 1.0f);
+GLfloat ks = 1.0f;
 
 int main()
 {
@@ -303,25 +319,37 @@ void update()
 	if (keyStatus[GLFW_KEY_A]) robotPosition.x -= 0.005f;
 
 	// camera position xz-plane
-	if (keyStatus[GLFW_KEY_DOWN]) cameraPosition.z += 0.005f;
-	if (keyStatus[GLFW_KEY_UP]) cameraPosition.z -= 0.005f;
-	if (keyStatus[GLFW_KEY_LEFT]) cameraPosition.x -= 0.005f;
-	if (keyStatus[GLFW_KEY_RIGHT]) cameraPosition.x += 0.005f;
+	if (keyStatus[GLFW_KEY_DOWN]) cameraPosition.z += 0.01f;
+	if (keyStatus[GLFW_KEY_UP]) cameraPosition.z -= 0.01f;
+	if (keyStatus[GLFW_KEY_LEFT]) cameraPosition.x -= 0.01f;
+	if (keyStatus[GLFW_KEY_RIGHT]) cameraPosition.x += 0.01f;
 	// y-plane (up-down)
 	if (keyStatus[GLFW_KEY_SPACE]) cameraPosition.y += 0.01f;
 	if (keyStatus[GLFW_KEY_LEFT_SHIFT]) cameraPosition.y -= 0.01f;
 	
 	// Model + robot rotation 
 	// !!!USES NUMPAD KEYS
-	if (keyStatus[GLFW_KEY_KP_6]) {
-		
-		modelRotation.y *= 0.995f;
-		robotRotation.y *= 0.995f;
-	}
 	if (keyStatus[GLFW_KEY_KP_4]) {
-		modelRotation.y += 0.007f;
-		robotRotation.y += 0.007f;
+		modelRotation.y += 0.005f;
+		robotRotation.y += 0.005f;
 	}
+	if (keyStatus[GLFW_KEY_KP_6]) {
+		modelRotation.y -= 0.005f;
+		robotRotation.y -= 0.005f;
+	}
+
+	// Light position change. To imitate a sun  with y and z positions changing
+	// use + or - keys on either the numpad or near backspace.
+	if (keyStatus[GLFW_KEY_KP_ADD] || keyStatus[GLFW_KEY_EQUAL]) {
+		lightPos.y -= 0.03f;
+		lightPos.z += 0.03f;
+	}
+	if (keyStatus[GLFW_KEY_KP_SUBTRACT] || keyStatus[GLFW_KEY_MINUS]) {
+		lightPos.y += 0.03f;
+		lightPos.z -= 0.03f;
+	}
+
+	if (keyStatus[GLFW_KEY_LEFT_SHIFT]) cameraPosition.y -= 0.01f;
 
 	if (keyStatus[GLFW_KEY_R]) pipeline.ReloadShaders();
 
@@ -337,6 +365,7 @@ void render()
 
 	// Clear colour buffer
 	glm::vec4 inchyraBlue = glm::vec4(0.345f, 0.404f, 0.408f, 1.0f);
+	// glm::vec4 inchyraBlue = glm::vec4(0.05f, 0.05f, 0.05f, 0.3f); Dark Background
 	glm::vec4 backgroundColor = inchyraBlue;
 	glClearBufferfv(GL_COLOR, 0, &backgroundColor[0]);
 
@@ -351,6 +380,17 @@ void render()
 	// Use our shader programs
 	glUseProgram(pipeline.pipe.program);
 
+
+	glUniform4f(glGetUniformLocation(pipeline.pipe.program, "viewPosition"), cameraPosition.x, cameraPosition.y, cameraPosition.z, 1.0);
+	glUniform4f(glGetUniformLocation(pipeline.pipe.program, "lightPosition"), lightPos.x, lightPos.y, lightPos.z, 1.0);
+	glUniform4f(glGetUniformLocation(pipeline.pipe.program, "ia"), ia.r, ia.g, ia.b, 1.0);
+	glUniform1f(glGetUniformLocation(pipeline.pipe.program, "ka"), ka);
+	glUniform4f(glGetUniformLocation(pipeline.pipe.program, "id"), id.r, id.g, id.b, 1.0);
+	glUniform1f(glGetUniformLocation(pipeline.pipe.program, "kd"), 1.0f);
+	glUniform4f(glGetUniformLocation(pipeline.pipe.program, "is"), is.r, is.g, is.b, 1.0);
+	glUniform1f(glGetUniformLocation(pipeline.pipe.program, "ks"), 1.0f);
+	glUniform1f(glGetUniformLocation(pipeline.pipe.program, "shininess"), 32.0f);
+
 	// Setup camera
 	glm::mat4 viewMatrix = glm::lookAt(cameraPosition,				 // eye
 									   cameraPosition + cameraFront, // centre
@@ -360,7 +400,7 @@ void render()
 	robotMatrix = glm::rotate(robotMatrix, robotRotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
 	robotMatrix = glm::rotate(robotMatrix, robotRotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
 	robotMatrix = glm::rotate(robotMatrix, robotRotation.z, glm::vec3(0.0f, 0.0f, 0.2f));
-	robotMatrix = glm::scale(robotMatrix, glm::vec3(0.2f, 0.2f, 0.2f));
+	robotMatrix = glm::scale(robotMatrix, glm::vec3(0.18f, 0.18f, 0.18f));
 
 	// Make active texture0 and bind robot texture exported from blender with robot model
 	glActiveTexture(GL_TEXTURE0);
