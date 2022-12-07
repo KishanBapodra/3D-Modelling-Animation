@@ -33,7 +33,7 @@ For building my scene, with trial and error, I changed the translations and rota
 I created UV Maps of my scene and my robot, baked in all materials, and connected final image texture to my models.
 - The textures are added in Assets -> textures.  
 - For final textures, I use mainrobo.png for Robot, Untitled.png for scene.  
-- Textures need to be made active and binded. So for each model, before calculating the matrix, I have binded the respective texture for that model.
+- Textures need to be made active and binded before drawing. So for both models, before calculating the matrix and drawing, I have binded the respective texture for that model.
 
 ![Texture Binding](../Appendices/textureBinding.jpg)
 
